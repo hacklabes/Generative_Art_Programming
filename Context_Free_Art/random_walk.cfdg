@@ -1,0 +1,71 @@
+startshape picture
+ 
+background{b -1}
+size{s 10 y -5 x -2}
+ 
+rule picture{
+    startstars{s .3 y 5 z -1}
+    starttree{}
+    starttree{s .8 x 5}
+    starttree{s .6 x -3 y -2}
+    moon{y 7 x 5 z -2}
+}
+ 
+rule starttree{
+    tree{a -1}
+}
+ 
+rule tree{
+    leaf{s 1.1}
+    CIRCLE{s 2 }
+    SQUARE{s .5 1 y .5 a 1}
+    tree{y 1 s .9 r 5 a .05}
+    tree{y .5 s .4 r 50}
+    tree{y .5 s .4 r -50}
+}
+ 
+rule tree{
+    tree{f 90}
+}
+ 
+rule leaf{
+    SQUARE{s .1 1 y .5 }
+    leaf{y -1 s  .99 r 10 b .02}
+}
+ 
+rule leaf{
+    leaf{f 0}
+}
+ 
+ 
+rule startstars{
+    stars{a -1}
+}
+ 
+rule stars{
+    36*{r 10}{10*{x 2}base{b 1 }}
+}
+ 
+rule base{
+    CIRCLE{}
+}
+ 
+rule base{
+ 
+}
+ 
+rule base .1 {
+    stars{s .4 a .02 }
+}
+ 
+rule base{
+    base {x 5}
+}
+ 
+rule moon{
+    100*{s .99 b .1 }CIRCLE{s 2 }
+}
+ 
+//uvl
+ 
+I

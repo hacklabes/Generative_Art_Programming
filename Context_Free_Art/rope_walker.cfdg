@@ -1,0 +1,29 @@
+startshape walk_clockwise
+
+
+
+shape walk_clockwise
+rule {
+	dot []
+	walk_clockwise [x .25 r 5 z 1 ]
+}
+rule 0.1 {
+	walk_counterclockwise []
+}
+rule 0.0001 { }
+ 
+shape walk_counterclockwise
+rule {
+	dot []
+	walk_counterclockwise [ x .25 r -5 z 1 ]
+}
+rule 0.1 {
+	walk_clockwise []
+}
+rule 0.0001 {}
+ 
+shape dot
+rule {
+	CIRCLE []
+	CIRCLE [ s .9 sat -1 b 1 z .1] 
+}
